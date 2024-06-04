@@ -38,7 +38,7 @@ jobs:
         id: query
         run: |
           echo "boards=["rock-5a"]" >> $GITHUB_OUTPUT
-          echo "suites=["bullseye"]"" >> $GITHUB_OUTPUT
+          echo "suites=["bullseye"]" >> $GITHUB_OUTPUT
           echo "flavors=["cli"]" >> $GITHUB_OUTPUT
 
   build-rootfs:
