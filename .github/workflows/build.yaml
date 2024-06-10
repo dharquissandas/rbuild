@@ -67,7 +67,7 @@ jobs:
     strategy:
       max-parallel: 10
       matrix:
-        boards: [ rootfs ]
+        boards: [ rock-5a ]
         suites: [ bullseye ]
         flavors: [ cli ]
         exclude:
