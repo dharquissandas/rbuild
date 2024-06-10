@@ -9,6 +9,8 @@ inputs:
     required: false
   flavor:
     required: true
+  kernel:
+    required: true
   artifacts:
     required: false
     default: false
@@ -31,7 +33,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        repository: radxa-repo/rbuild
+        repository: dharquissandas/rbuild
     - name: Set suite based on input variables
       shell: bash
       run: |
@@ -75,7 +77,7 @@ runs:
       run: |
         mkdir .output
         cd .output
-        sudo ../rbuild ${{ env.options }} --timestamp=${{ inputs.timestamp}} --compress --native-build --shrink ${{ inputs.board }} ${{ env.suite }} ${{ inputs.flavor }}
+        sudo ../rbuild ${{ env.options }} --timestamp=${{ inputs.timestamp}} --compress --native-build --shrink -k ${{ inputs.kernel }} ${{ inputs.board }} ${{ env.suite }} ${{ inputs.flavor }}
         if [ -n "$(ls -A ./* 2>/dev/null)" ]
         then
           sudo chown $USER ./*
