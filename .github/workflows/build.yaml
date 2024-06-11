@@ -57,7 +57,7 @@ jobs:
           board: ${{ matrix.boards }}
           suite: ${{ matrix.suites }}
           flavor: ${{ matrix.flavors }}
-          kernel:  "../kernel/linux-image-5.10.110-99-rockchip_5.10.110-99-rockchip_arm64.deb"
+          kernel:  "../kernel/linux-image-5.10.110-99-rockchip_5.10.110-99_arm64.deb"
           test-repo: true
           artifacts: true
 
@@ -79,7 +79,7 @@ jobs:
           board: ${{ matrix.boards }}
           suite: ${{ matrix.suites }}
           flavor: ${{ matrix.flavors }}
-          kernel:  "../kernel/linux-image-5.10.110-99-rockchip_5.10.110-99-rockchip_arm64.deb"
+          kernel:  "../kernel/linux-image-5.10.110-99-rockchip_5.10.110-99_arm64.deb"
           test-repo: true
           artifacts: true
           prebuilt-rootfs: true
